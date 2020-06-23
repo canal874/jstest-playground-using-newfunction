@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    Code Input:<br />
+    <textarea id="code">
+say("Hello, Playground!"); // Call original say() function
+
+completed = () => {
+  document.body.insertAdjacentHTML("beforeend", "completed() is attacked.<br>");
+};
+      
+say = () => {
+  document.body.insertAdjacentHTML("beforeend", "say() is attacked.<br>")
+};
+      
+say("Hello, Playground!"); // Call injected say() function
+      </textarea
+    ><br />
+    <input type="button" value="Run" onclick="run()" /><br />
+    Preview: <br />
+    <div id="previewArea"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
