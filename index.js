@@ -5,7 +5,9 @@
 function run() {
   const code = document.getElementById("code").value;
   let completed = function() {
-    say("Completed!");
+    document
+      .getElementById("previewArea")
+      .insertAdjacentHTML("beforeend", "Completed!<br>");
   };
   new Function(code)();
   completed();
