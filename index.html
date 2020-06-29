@@ -8,11 +8,11 @@
     <textarea id="code">
 say("Hello, Playground!"); // Call original say() function
 
-completed = () => {
+completed = function() {
   document.body.insertAdjacentHTML("beforeend", "completed() is attacked.<br>");
 };
       
-say = () => {
+say = function() {
   document.body.insertAdjacentHTML("beforeend", "say() is attacked.<br>")
 };
       
